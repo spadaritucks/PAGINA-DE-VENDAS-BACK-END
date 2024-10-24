@@ -43,6 +43,7 @@ class VendasController extends Controller
                 'cliente_id' => $request->cliente_id,
                 'vendedor_id' => $request->vendedor_id,
                 'valor_integral' => $valor_integral,
+                'forma_pagamento' => $request->forma_pagamento,
                 'parcelas' => $request->parcelas,
 
             ]);
@@ -79,6 +80,7 @@ class VendasController extends Controller
             $venda->updateOrCreate([
                 'cliente_id' => $request->cliente_id,
                 'vendedor_id' => $request->vendedor_id,
+                'forma_pagamento' => $request->forma_pagamento,
                 'valor_integral' => $valor_integral,
                 'parcelas' => $request->parcelas,
             ]);
